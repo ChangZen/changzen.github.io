@@ -1,0 +1,88 @@
+<html>
+  <head>
+     <title>DCSQuiz3</title>
+     <link rel="stylesheet" type="text/css" href="DCS2209280_Ngoi Chang Zen.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+     <script>
+       function validateForm() {
+           let x = document.TheFirstForm.username.value;
+           if (x == "") {
+               alert("Please provide your Name!");
+               return false;
+           }
+
+           var letters = /^[A-Za-z]/;
+           if (!x.match(letters))
+           {
+             alert("Please input alphabet characters.");
+            return false;
+           }
+       }
+   </script>
+  </head>
+  <body topmargin=60 leftmargin=50>
+   <center>
+    <table>
+      <form>
+        <caption>DCS3003 Website Design</caption>
+         <tr>
+         <td class="title">Student ID:></td>
+         <td><input type="text" name="Student Id" maxlength=10></td>
+         <td class="title">Student Name    :</td>
+         <td><input type="text"  name="Student Name">
+         </td></tr>
+        
+         <tr>
+         <td class="title">Course    :</td>
+         <td><input type="text" name="Course Name"</td>
+         <td class="title">IC No.    :</td>
+         <td><input type="number" name="IC"></td>
+         <tr>
+
+         <tr>
+         <td class="title">Email address    :</td>
+         <td><input type="email" name="useremail"></td>
+         <td class="title">D.O.B    :</td>
+         <td><input type="date" name=dob><br></td>
+         <tr>
+                <td><u> Questions</u><br>Please answer all questions</td>
+                </tr>
+            
+                    <td>1)Have you grapsed the content of the Website Design so far?:</td>
+                    <td><input type=radio name=ans1 value=Yes>Yes
+                    <input type=radio name=ans1 value=No>No</td>
+                </tr>
+            
+                <tr>
+                    <td class="title">2)Can you now create a simple but interactive website?:</td>
+                    <td><input type=radio name=ans2 value=Yes>Yes
+                    <input type=radio name=ans2 value=No>No</td>
+                </tr>
+                
+                <tr>
+                    <td class="title">3)What have you learned so far?</td>
+                    <td>
+                    <input type=checkbox name=learned value=Knowledge>Knowledge                      
+                    <input type=checkbox name=learned value="Practical Skills">Practical Skills
+                    <input type=checkbox name=learned value="Problem Solving">Problem Solving
+                    <input type=checkbox name=learned value="Self-Exploration Skills">Self-Exploration Skills
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class='title'>4)Wish items / suggestions*</td>
+                    <td><textarea rows=4 cols=70 name=suggestion></textarea></td>
+                </tr>
+            
+                </table>
+                <br><br>
+                <input type=reset value=Reset>
+                <input type=submit value=Submit>
+                <br><br>
+                </tr>
+      </form>
+    </table>
+   </center>
+  </body>
+</html>

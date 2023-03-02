@@ -1,0 +1,27 @@
+style{
+table{
+   font-family:Times New Roman;
+   font-size:16pt;
+   border:1;
+ }
+caption{
+   text-align:center;
+   font-weight:bold;
+   font-size:26pt;
+   height:50px;
+ }
+th,td {
+  padding: 15px;
+  height: 20%;
+ }
+td.title{
+  font-weight:bold;
+  font-size:large;
+ }
+.bottom{
+  padding-left:90px;
+ }
+bottom{
+  margin-left:5cm;
+ }
+</style>
