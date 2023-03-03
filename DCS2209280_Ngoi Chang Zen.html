@@ -1,41 +1,80 @@
 <html>
   <head>
-     <title>DCSQuiz3</title>
-     <link rel="stylesheet" type="text/css" href="DCS2209280_Ngoi Chang Zen.css">
+     <title>Quiz3</title>
+     <link rel="stylesheet" type="text/css" href="DCS2209280_NgoiChangZen.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
      <script>
-       function validateForm() {
-           let x = document.TheFirstForm.username.value;
-           if (x == "") {
-               alert("Please provide your Name!");
-               return false;
-           }
 
-           var letters = /^[A-Za-z]/;
-           if (!x.match(letters))
-           {
-             alert("Please input alphabet characters.");
-            return false;
-           }
-       }
+            function validateForm(){
+                let x = document.forms["quiz"]["studentid"].value;
+                if (x==""){
+                    alert("please input your student id");
+                    return false;
+                }
+                let y = document.forms["quiz"]["studentname"].value;
+                if (y==""){
+                    alert("please input your student name");
+                    return false;
+                }
+            
+                let z = document.forms["quiz"]["course"].value;
+                if (z==""){
+                    alert("please input your course");
+                    return false;
+                }
+                
+                let n = document.forms["quiz"]["IC"].value;
+                if (n==""){
+                    alert("please input your IC");
+                    return false;
+                }
+            let a = document.forms["quiz"]["useremail"].value;
+                if (a==""){
+                    alert("please input your email");
+                    return false;
+                }
+                if((quiz.option1[0].checked == false) && (quiz.option1[1].checked == false))
+            {
+                alert("Please choose Yes or no on question 1");
+                return false;
+            } 
+            if((quiz.option2[0].checked == false) && (quiz.option2[1].checked == false))
+            {
+                alert("Please choose Yes or no on question 2");
+                return false;
+            } 
+            var group=document.quiz.checkbox1;
+            for (var i=0; i<group.length; i++)
+            {
+                if (group[i].checked)
+                break;
+            }
+            if (i==group.length)
+            {
+                alert("please answer question 3");
+                return false;
+            }
+            
+            }
+      
    </script>
   </head>
   <body topmargin=60 leftmargin=50>
    <center>
     <table>
-      <form>
-        <caption>DCS3003 Website Design</caption>
+   <form name=MyFirstForm onsubmit="return validateForm()" >  
+        <h2>DCS3003 Website Design</h2>
          <tr>
-         <td class="title">Student ID:></td>
-         <td><input type="text" name="Student Id" maxlength=10></td>
+         <td class="title">Student ID:</td>
+         <td><input type="text" name="Student Id"maxlength=10 autofocus onmouseout="return validateForm()"></td>
          <td class="title">Student Name    :</td>
-         <td><input type="text"  name="Student Name">
+         <td><input type="text"  name="Student Name"autofocus onmouseout="return validateForm()">
          </td></tr>
         
          <tr>
          <td class="title">Course    :</td>
-         <td><input type="text" name="Course Name"</td>
+         <td><input type="text" name="Course Name"></td>
          <td class="title">IC No.    :</td>
          <td><input type="number" name="IC"></td>
          <tr>
@@ -45,11 +84,12 @@
          <td><input type="email" name="useremail"></td>
          <td class="title">D.O.B    :</td>
          <td><input type="date" name=dob><br></td>
-         <tr>
-                <td><u> Questions</u><br>Please answer all questions</td>
+         <tr></tr></table>
+         <table>
+                <td class="underline"><u> Questions</u><br>Please answer all questions</td>
                 </tr>
             
-                    <td>1)Have you grapsed the content of the Website Design so far?:</td>
+                    <td class="title">1)Have you grapsed the content of the Website Design so far?:</td>
                     <td><input type=radio name=ans1 value=Yes>Yes
                     <input type=radio name=ans1 value=No>No</td>
                 </tr>
