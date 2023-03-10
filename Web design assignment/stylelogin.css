@@ -1,0 +1,211 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9,30, 0.452),rgba(4, 9,30, 0.452) ),url(university.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+nav h1{
+    font-size:x-large; 
+    text-align: left;
+    width:250; 
+    height:65;
+}
+
+nav img{
+    width:190;
+     height:65;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding:8px 8px ;
+    position: relative;
+}
+.nav-links ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.nav-links ul li::after{
+    content:"";
+    width:0%;
+    height: 2px;
+    background: #F44336;
+    display: block;
+    margin: auto;
+    transition:0.3s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: left;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box{
+    margin: 10px 0 40px;
+    font: size 14px;
+    color:#f8f8f8;
+}
+.more {
+    font-size:20px;
+    text-decoration: none;
+    color: #fff;
+    display:inline-block;
+    padding: 10px 40px;
+    border: 3px solid #fff;
+    margin-top: 10px;
+    background: transparent;
+    transition: 0.2s ease;
+    
+    
+  }
+  .more:hover{
+     background:rgb(241, 111, 6);
+    font-size: larger;
+    text-decoration: none;
+  }
+    
+    ul li ul.dropdown li {
+    display: block;
+    }
+    ul li ul.dropdown {
+    width: 130%;
+    background: transparent;
+    position: absolute;
+    z-index: 777;
+    display: none;
+    }
+    ul li a:hover {
+    background: #0035a9;
+    }
+    ul li:hover ul.dropdown {
+    display: block;
+    transition: 400ms;
+    }
+    
+    .nav-links{
+        flex: 1;
+        text-align: right;
+    }
+    
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4070f4;
+  text-align: center;
+}
+.wrapper{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  padding: 34px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #4070f4;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #0e4bf1;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: #4070f4;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}

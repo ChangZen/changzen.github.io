@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9,30, 0.452),rgba(4, 9,30, 0.452) ),url(university.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+nav h1{
+    font-size:x-large; 
+    text-align: left;
+    width:250; 
+    height:65;
+}
+
+nav img{
+    width:190;
+     height:65;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding:8px 8px ;
+    position: relative;
+}
+.nav-links ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.nav-links ul li::after{
+    content:"";
+    width:0%;
+    height: 2px;
+    background: #F44336;
+    display: block;
+    margin: auto;
+    transition:0.3s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: left;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box{
+    margin: 10px 0 40px;
+    font: size 14px;
+    color:#f8f8f8;
+}
+.more {
+    font-size:20px;
+    text-decoration: none;
+    color: #fff;
+    display:inline-block;
+    padding: 10px 40px;
+    border: 3px solid #fff;
+    margin-top: 10px;
+    background: transparent;
+    transition: 0.2s ease;
+    
+    
+  }
+  .more:hover{
+     background:rgb(241, 111, 6);
+    font-size: larger;
+    text-decoration: none;
+  }
+    
+    ul li ul.dropdown li {
+    display: block;
+    }
+    ul li ul.dropdown {
+    width: 130%;
+    background: transparent;
+    position: absolute;
+    z-index: 777;
+    display: none;
+    }
+    ul li a:hover {
+    background: #0035a9;
+    }
+    ul li:hover ul.dropdown {
+    display: block;
+    transition: 400ms;
+    }
+    
+    .nav-links{
+        flex: 1;
+        text-align: right;
+    }
+    
+    
+    .row{
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .course-col{
+        flex-basis: 31%;
+        background: #f6aeae;
+        border-radius: 10px;
+        margin-bottom: 10%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        text-align: justify;
+        text-decoration: none;
+    
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
