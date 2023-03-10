@@ -9,7 +9,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400;500;700;900&display=swap" rel="stylesheet">
-     </head>
+<script>
+function validateForm() {
+    let a = document.forms ["form"]["name"].value;
+    if(a == ""){
+        alert("Please provide your name");
+        return false;
+    }
+    let d = document.forms ["form"]["email"].value;
+    if(d == ""){
+        alert("Please provide your email");
+        return false;
+}
+alert(" Thanks! We have Received Your Opinion Successfully!")
+}
+</script>
+</head>
         <body>
             <section class="header">
                 <nav>
@@ -41,22 +56,22 @@
                 <div class="contact-col">
                     <div>
                         <h7>Location of Our University:</h7>
-                        <p>Jalan Iman, 81310 Skudai, Johor </p>
+                        <p style="color:rgb(70, 201, 253) ">Jalan Iman, 81310 Skudai, Johor </p>
                     </div>
                     <div>
                         <h7>Number To Contact Us:</h7>
-                        <p>+60 123456789</p>
+                        <p style="color: rgb(70, 201, 253);">+60 016-7784450</p>
                     </div>
                     <div>
                         <h7>Our Email Address:</h7>
-                        <p>nchangzen@gmail.com</p>
+                        <p style="color: rgb(70, 201, 253);">nchangzen@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-col">
-                    <form action="">
-                        <input type="text" placeholder="Enter Your Name" required>
-                        <input type="email" placeholder="Enter Your Email" required>
-                        <input type="text" placeholder="Let Us Know Your Opinion" required>
+                    <form id="form" onsubmit="return validateForm()">
+                        <input type="text" id="name" placeholder="Enter Your Name">
+                        <input type="email" id="email" placeholder="Enter Your Email">
+                        <input type="text" placeholder="Let Us Know Your Opinion"> 
                         <button type="submit" class="contact-col">Send It</button>
                     </form>
                 </div>
